@@ -1,0 +1,103 @@
+body {
+  background: rgb(183, 216, 183);
+  font-size: 13px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 10px auto;
+  background: white;
+  border-radius: 5px;
+  padding: 17px;
+  position: relative;
+}
+
+#question {
+  margin-bottom: 17px;
+  font-weight: bold;
+}
+
+#choices {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 17px;
+}
+
+#choices > li {
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+#choices > li:hover {
+  background: #c3c3c3;
+}
+
+#choices > li.correct {
+  background: #c9e4cf;
+  border-color: #cae6d0;
+  color: #0f5620;
+  font-weight: bold;
+}
+
+#choices > li.correct::after {
+  content: "    -> correct!";
+}
+
+#choices > li.wrong {
+  background: #fcd1d4;
+  border-color: #e7bec2;
+  color: #6c1a22;
+  font-weight: bold;
+}
+
+#choices > li.wrong::after {
+  content: " -> wrong!";
+}
+
+#btn, #result > a {
+  background: #3ca0e3;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 0 #348dc9;
+}
+
+#btn.disabled {
+  background: rgb(196, 196, 196);
+  box-shadow: 0 4px 0 rgb(182, 180, 180);
+  opacity: 0.7;
+}
+
+#result {
+  position: absolute;
+  width: 500px;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  top: -600px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 3px;
+  text-align: center;
+  transition: 0.5s ease-out;
+}
+
+#result.show {
+  top: 60px;
+}
+#result > a {
+  display: block;
+  text-decoration: none;
+}
+
+#result > p {
+  font-size: 25px;
+}
+
